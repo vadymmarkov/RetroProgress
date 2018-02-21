@@ -1,6 +1,7 @@
 // RetroProgress iOS Playground
 
 import UIKit
+import PlaygroundSupport
 import RetroProgress
 
-var str = "Hello, playground"
+

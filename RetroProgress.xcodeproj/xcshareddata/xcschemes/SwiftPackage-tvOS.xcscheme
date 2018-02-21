@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D284B0FB1F79038B00D94AF3"
-               BuildableName = "RetroProgress_tvOS.framework"
+               BuildableName = "RetroProgress.framework"
                BlueprintName = "RetroProgress-tvOS"
                ReferencedContainer = "container:RetroProgress.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D284B0FB1F79038B00D94AF3"
-            BuildableName = "RetroProgress_tvOS.framework"
+            BuildableName = "RetroProgress.framework"
             BlueprintName = "RetroProgress-tvOS"
             ReferencedContainer = "container:RetroProgress.xcodeproj">
          </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D284B0FB1F79038B00D94AF3"
-            BuildableName = "RetroProgress_tvOS.framework"
+            BuildableName = "RetroProgress.framework"
             BlueprintName = "RetroProgress-tvOS"
             ReferencedContainer = "container:RetroProgress.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D284B0FB1F79038B00D94AF3"
-            BuildableName = "RetroProgress_tvOS.framework"
+            BuildableName = "RetroProgress.framework"
             BlueprintName = "RetroProgress-tvOS"
             ReferencedContainer = "container:RetroProgress.xcodeproj">
          </BuildableReference>
