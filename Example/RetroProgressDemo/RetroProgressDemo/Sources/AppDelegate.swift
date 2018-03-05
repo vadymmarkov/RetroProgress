@@ -2,21 +2,16 @@ import UIKit
 import RetroProgress
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+final class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
-  lazy var navigationController: UINavigationController = { [unowned self] in
-    let controller = UINavigationController(rootViewController: self.viewController)
-    return controller
-    }()
+  private lazy var viewController = ViewController()
+  private lazy var navigationController = UINavigationController(
+    rootViewController: self.viewController
+  )
 
-  lazy var viewController: ViewController = {
-    let controller = ViewController()
-    return controller
-    }()
-
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = navigationController
     window?.makeKeyAndVisible()
