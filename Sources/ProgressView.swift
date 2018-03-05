@@ -46,7 +46,7 @@ public final class ProgressView: UIView {
 
   /// The inner inset for progress bar and separators.
   @IBInspectable
-  public var progressInset: UIEdgeInsets = .zero {
+  public var progressInset: UIEdgeInsets = .init(top: 4, left: 4, bottom: 4, right: 4) {
     didSet {
       layoutLayers()
     }
@@ -60,6 +60,7 @@ public final class ProgressView: UIView {
     }
     set {
       layer.backgroundColor = newValue?.cgColor
+      innerLayer.backgroundColor = newValue?.cgColor
     }
   }
 
@@ -85,11 +86,20 @@ public final class ProgressView: UIView {
     }
   }
 
+
+  /// The duration for progress animation from 0 to 1.
+  @IBInspectable
+  public var fullProgressAnimationDuration: TimeInterval = 0.8
+
+  @IBInspectable
+  public var separatorWidth: CGFloat = 2
+
   // MARK: - Private layers
 
   private let replicatorLayer = CAReplicatorLayer()
   private let separatorLayer = CALayer()
   private let progressLayer = CALayer()
+  private let innerLayer = CALayer()
 
   // MARK: - Private properties
 
@@ -97,6 +107,7 @@ public final class ProgressView: UIView {
     didSet {
       progressLayer.removeAllAnimations()
       progressLayer.bounds.size.width = progressLayerWidth
+      updateInnerCornerRadius()
     }
   }
 
@@ -104,8 +115,10 @@ public final class ProgressView: UIView {
 
   public override init(frame: CGRect) {
     super.init(frame: frame)
-    layer.addSublayer(progressLayer)
+    layer.addSublayer(innerLayer)
     layer.addSublayer(replicatorLayer)
+
+    innerLayer.addSublayer(progressLayer)
     replicatorLayer.addSublayer(separatorLayer)
 
     setupLayers()
@@ -122,12 +135,21 @@ public final class ProgressView: UIView {
   /// Animates progress bar to the specified value.
   /// - Parameter progress: Progress value
   /// - Parameter duration: Animation duration
-  public func animateProgress(to progress: Float, duration: TimeInterval) {
+  public func animateProgress(to progress: Float, duration: TimeInterval? = nil) {
     let currentWidth = progressLayer.frame.width
     progressValue = progress
+    let newWidth = progressLayer.frame.width
+    let animationDuration: TimeInterval
+
+    if let duration = duration {
+      animationDuration = duration
+    } else {
+      let delta = Double(abs(newWidth - currentWidth))
+      animationDuration = delta * fullProgressAnimationDuration / Double(innerFrame.width)
+    }
 
     let layerAnimation = CABasicAnimation(keyPath: "bounds.size.width")
-    layerAnimation.duration = duration
+    layerAnimation.duration = animationDuration
     layerAnimation.fromValue = currentWidth
     layerAnimation.toValue = progressLayer.frame.width
 
@@ -150,16 +172,14 @@ public final class ProgressView: UIView {
     separatorLayer.frame = CGRect(
       x: stepWidth,
       y: 0,
-      width: 2,
+      width: separatorWidth,
       height: replicatorLayer.bounds.height
     )
 
-    progressLayer.frame = CGRect(
-      x: innerFrame.minX,
-      y: innerFrame.minY,
-      width: progressLayerWidth,
-      height: innerFrame.height
-    )
+    innerLayer.frame = innerFrame
+    progressLayer.frame = innerLayer.bounds
+    progressLayer.frame.size.width = progressLayerWidth
+    updateInnerCornerRadius()
   }
 
   private var innerFrame: CGRect {
@@ -178,20 +198,32 @@ public final class ProgressView: UIView {
   // MARK: - Setup
 
   private func setupLayers() {
-    backgroundColor = .white
+    layer.backgroundColor = UIColor.white.cgColor
     layer.masksToBounds = true
     layer.cornerRadius = 10
-    layer.borderColor = UIColor.blue.cgColor
+    layer.borderColor = UIColor.black.cgColor
     layer.borderWidth = 2
 
-    separatorLayer.backgroundColor = UIColor(white: 1, alpha: 0.5).cgColor
+    innerLayer.masksToBounds = true
+    innerLayer.cornerRadius = layer.cornerRadius
+    innerLayer.backgroundColor = layer.backgroundColor
+
+    separatorLayer.backgroundColor = UIColor.black.cgColor
 
     progressLayer.position = .zero
     progressLayer.anchorPoint = .zero
-    progressLayer.backgroundColor = UIColor.blue.cgColor
+    progressLayer.backgroundColor = UIColor(
+      red: 218/255,
+      green: 236/255,
+      blue: 255/255,
+      alpha: 1).cgColor
   }
 
   private func updateReplicatorLayer() {
     replicatorLayer.instanceCount = Int(numberOfSteps - 1)
+  }
+
+  private func updateInnerCornerRadius() {
+    innerLayer.cornerRadius = innerLayer.frame.height * layer.cornerRadius / bounds.height
   }
 }
