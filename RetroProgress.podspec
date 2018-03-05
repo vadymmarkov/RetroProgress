@@ -9,23 +9,15 @@ Pod::Spec.new do |s|
     :git => "https://github.com/vadymmarkov/RetroProgress.git",
     :tag => s.version.to_s
   }
-  s.social_media_url = 'https://twitter.com/vadymmarkov'
+  s.social_media_url = 'https://twitter.com/hyperoslo'
 
-  s.ios.deployment_target = '8.0'
-  s.osx.deployment_target = '10.9'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.2'
-  s.watchos.deployment_target = "3.0"
 
   s.requires_arc = true
-  s.ios.source_files = 'Sources/{iOS,Shared}/**/*'
-  s.tvos.source_files = 'Sources/{iOS,tvOS,Shared}/**/*'
-  s.osx.source_files = 'Sources/{macOS,Shared}/**/*'
-  s.watchos.source_files = 'Sources/{watchOS,Shared}/**/*'
+  s.ios.source_files = 'Sources/**/*'
+  s.tvos.source_files = 'Sources/**/*'
 
-  # s.ios.frameworks = 'UIKit', 'Foundation'
-  # s.osx.frameworks = 'Cocoa', 'Foundation'
-  # s.dependency 'Whisper', '~> 1.0'
-  # s.watchos.exclude_files = ["Sources/AnimatedImageView.swift"] 
-
+  s.ios.frameworks = 'UIKit'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 end
