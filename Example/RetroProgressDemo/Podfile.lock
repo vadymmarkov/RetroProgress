@@ -1,5 +1,5 @@
 PODS:
-  - RetroProgress (0.1.0)
+  - RetroProgress (1.0.0)
 
 DEPENDENCIES:
   - RetroProgress (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../../
 
 SPEC CHECKSUMS:
-  RetroProgress: d5d0d4f806105f20faabb30b50b7bf918c427eb4
+  RetroProgress: 7cef10426f9c6660c1c8329017487b3a2c4ee080
 
 PODFILE CHECKSUM: b3db78f7d70b6d792eb53110d0bce5de5f210822
 
