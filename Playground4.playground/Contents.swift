@@ -13,7 +13,6 @@ progressView.layer.cornerRadius = 15
 progressView.layer.borderColor = UIColor.white.cgColor
 progressView.trackColor = .black
 progressView.progressColor = .white
-progressView.separatorColor = .black
 
 // Set progress
 progressView.animateProgress(to: 0.9, duration: 4)
