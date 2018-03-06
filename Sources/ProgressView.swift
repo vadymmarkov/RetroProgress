@@ -15,7 +15,7 @@ public final class ProgressView: UIView {
     }
   }
 
-  /// 0...numberOfSteps. Values outside are pinned.
+  /// Number of separators (0...numberOfSteps). Values outside are pinned.
   @IBInspectable
   public var step: Float {
     get {
@@ -92,6 +92,7 @@ public final class ProgressView: UIView {
   public var fullProgressAnimationDuration: TimeInterval = 0.8
 
   @IBInspectable
+  /// The width of step separators.
   public var separatorWidth: CGFloat = 2
 
   // MARK: - Private layers
@@ -133,7 +134,7 @@ public final class ProgressView: UIView {
   // MARK: - Animations
 
   /// Animates progress bar to the specified value.
-  /// - Parameter progress: Progress value
+  /// - Parameter progress: Progress value (0...1)
   /// - Parameter duration: Animation duration
   public func animateProgress(to progress: Float, duration: TimeInterval? = nil) {
     let currentWidth = progressLayer.frame.width
@@ -156,7 +157,7 @@ public final class ProgressView: UIView {
     progressLayer.add(layerAnimation, forKey: nil)
   }
 
-  /// Animates progress bar to the specified value.
+  /// Animates progress bar to the specified value
   /// - Parameter step: Number of steps (0...numberOfSteps)
   /// - Parameter duration: Animation duration
   public func animateSteps(to step: Float, duration: TimeInterval? = nil) {
