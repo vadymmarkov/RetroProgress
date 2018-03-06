@@ -105,13 +105,21 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
-		D5B2E8951C3A780C00C0327D = {
+		D59A75FB204F3AC6002876E9 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
 				D524D63F204DFFEC0015716B /* Playground1.playground */,
 				D500FD111C3AABED00782D78 /* Playground2.playground */,
 				D524D63E204DDD1C0015716B /* Playground3.playground */,
 				D5AD6395204F351800E60B67 /* Playground4.playground */,
+			);
+			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		D5B2E8951C3A780C00C0327D = {
+			isa = PBXGroup;
+			children = (
+				D59A75FB204F3AC6002876E9 /* Playgrounds */,
 				D284B13F1F79081F00D94AF3 /* Info */,
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6298F1C3A8BDA007F7B7C /* RetroProgressTests */,
