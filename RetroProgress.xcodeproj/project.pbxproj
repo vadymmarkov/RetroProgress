@@ -45,6 +45,7 @@
 		D500FD111C3AABED00782D78 /* Playground2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D524D63E204DDD1C0015716B /* Playground3.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground3.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D524D63F204DFFEC0015716B /* Playground1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground1.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D5AD6395204F351800E60B67 /* Playground4.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground4.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D5B2E89F1C3A780C00C0327D /* RetroProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RetroProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2E8A91C3A780C00C0327D /* RetroProgress-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RetroProgress-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C629821C3A892A007F7B7C /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 				D524D63F204DFFEC0015716B /* Playground1.playground */,
 				D500FD111C3AABED00782D78 /* Playground2.playground */,
 				D524D63E204DDD1C0015716B /* Playground3.playground */,
+				D5AD6395204F351800E60B67 /* Playground4.playground */,
 				D284B13F1F79081F00D94AF3 /* Info */,
 				D5C629691C3A809D007F7B7C /* Sources */,
 				D5C6298F1C3A8BDA007F7B7C /* RetroProgressTests */,

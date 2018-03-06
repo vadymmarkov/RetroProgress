@@ -8,6 +8,8 @@ public final class ProgressView: UIView {
   @IBInspectable
   public var numberOfSteps: UInt = 10 {
     didSet {
+      replicatorLayer.isHidden = numberOfSteps == 0
+      separatorLayer.isHidden = replicatorLayer.isHidden
       updateReplicatorLayer()
       layoutLayers()
     }
@@ -20,9 +22,7 @@ public final class ProgressView: UIView {
       return Float(numberOfSteps) * progress
     }
     set {
-      if numberOfSteps > 0 {
-        progress = newValue / Float(numberOfSteps)
-      }
+      progress = makeProgress(forStep: newValue)
     }
   }
 
@@ -156,6 +156,13 @@ public final class ProgressView: UIView {
     progressLayer.add(layerAnimation, forKey: nil)
   }
 
+  /// Animates progress bar to the specified value.
+  /// - Parameter step: Number of steps (0...numberOfSteps)
+  /// - Parameter duration: Animation duration
+  public func animateSteps(to step: Float, duration: TimeInterval? = nil) {
+    animateProgress(to: makeProgress(forStep: step), duration: duration)
+  }
+
   // MARK: - Layout
 
   public override func layoutSubviews() {
@@ -164,17 +171,19 @@ public final class ProgressView: UIView {
   }
 
   private func layoutLayers() {
-    let stepWidth = innerFrame.width / CGFloat(numberOfSteps)
+    if numberOfSteps > 0 {
+      let stepWidth = innerFrame.width / CGFloat(numberOfSteps)
 
-    replicatorLayer.frame = innerFrame
-    replicatorLayer.instanceTransform = CATransform3DMakeTranslation(stepWidth, 0, 0)
+      replicatorLayer.frame = innerFrame
+      replicatorLayer.instanceTransform = CATransform3DMakeTranslation(stepWidth, 0, 0)
 
-    separatorLayer.frame = CGRect(
-      x: stepWidth,
-      y: 0,
-      width: separatorWidth,
-      height: replicatorLayer.bounds.height
-    )
+      separatorLayer.frame = CGRect(
+        x: stepWidth,
+        y: 0,
+        width: separatorWidth,
+        height: replicatorLayer.bounds.height
+      )
+    }
 
     innerLayer.frame = innerFrame
     progressLayer.frame = innerLayer.bounds
@@ -219,11 +228,24 @@ public final class ProgressView: UIView {
       alpha: 1).cgColor
   }
 
+  // MARK: - Helpers
+
   private func updateReplicatorLayer() {
+    guard numberOfSteps > 0 else {
+      return
+    }
     replicatorLayer.instanceCount = Int(numberOfSteps - 1)
   }
 
   private func updateInnerCornerRadius() {
     innerLayer.cornerRadius = innerLayer.frame.height * layer.cornerRadius / bounds.height
+  }
+
+  private func makeProgress(forStep step: Float) -> Float {
+    guard numberOfSteps > 0 else {
+      return 0
+    }
+
+    return step / Float(numberOfSteps)
   }
 }
