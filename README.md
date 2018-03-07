@@ -1,6 +1,6 @@
-![RetroProgress](https://github.com/hyperoslo/BarcodeScanner/blob/master/Images/cover.png)
+![RetroProgress](https://github.com/hyperoslo/RetroProgress/blob/master/Images/cover.png)
 
-[![CI Status](https://img.shields.io/circleci/project/github/vadymmarkov/RetroProgress.svg)](https://circleci.com/gh/vadymmarkov/RetroProgress)
+[![CI Status](https://img.shields.io/circleci/project/github/hyperoslo/RetroProgress.svg)](https://circleci.com/gh/hyperoslo/RetroProgress)
 [![Version](https://img.shields.io/cocoapods/v/RetroProgress.svg?style=flat)](http://cocoadocs.org/docsets/RetroProgress)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/RetroProgress.svg?style=flat)](http://cocoadocs.org/docsets/RetroProgress)
@@ -11,9 +11,9 @@
 
 Do you miss the 90s? We know you do. Dial-up internet, flickering screens,
 brightly coloured websites and, of course, this annoyingly slow progress bar
-testing your patience over and over again. Yes, it was a while ago, but we don't
-want it to be forgotten. Meet **RetroProgress**, a progress bar made to cure
-your 90s nostalgia.
+that has been invented to test your patience. Yes, it was a while ago, but we
+don't want it to be forgotten. Meet **RetroProgress**, a progress bar made to
+cure your 90s nostalgia.
 
 - [x] Easy to use and customizable progress bar.
 - [x] Support for both progress value (0...1) and number of steps.
@@ -24,7 +24,7 @@ your 90s nostalgia.
 
 ## Table of Contents
 
-<img src="https://github.com/hyperoslo/BarcodeScanner/blob/master/Images/icon.png" width="202" height="203" alt="RetroProgress Icon" align="right" />
+<img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/icon.png" width="202" height="203" alt="RetroProgress Icon" align="right" />
 
 * [Usage](#usage)
 * [Public properties](#public-properties)
@@ -36,8 +36,8 @@ your 90s nostalgia.
 
 ## Usage
 
-Are you excited? So are we. Let's use default configuration and see what we get
-out-of-the-box:
+Are you excited to bring this thing back from the dead? So are we. Let's use
+default configuration and see what we get out-of-the-box:
 
 ```swift
 let progressView = ProgressView(frame: CGRect(x: 0, y: 0, width: 360, height: 30))
@@ -147,7 +147,7 @@ pod 'RetroProgress'
 To install just write into your Cartfile:
 
 ```ruby
-github "vadymmarkov/RetroProgress"
+github "hyperoslo/RetroProgress"
 ```
 
 **RetroProgress** can also be installed manually. Just download and drop `Sources` folders in your project.
@@ -158,8 +158,8 @@ Hyper Interaktiv AS, ios@hyper.no
 
 ## Contributing
 
-We would love you to contribute to **RetroProgress**, check the [CONTRIBUTING](https://github.com/vadymmarkov/RetroProgress/blob/master/CONTRIBUTING.md) file for more info.
+We would love you to contribute to **RetroProgress**, check the [CONTRIBUTING](https://github.com/hyperoslo/RetroProgress/blob/master/CONTRIBUTING.md) file for more info.
 
 ## License
 
-**RetroProgress** is available under the MIT license. See the [LICENSE](https://github.com/vadymmarkov/RetroProgress/blob/master/LICENSE.md) file for more info.
+**RetroProgress** is available under the MIT license. See the [LICENSE](https://github.com/hyperoslo/RetroProgress/blob/master/LICENSE.md) file for more info.

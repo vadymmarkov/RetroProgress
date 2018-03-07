@@ -46,7 +46,7 @@ public final class ProgressView: UIView {
 
   /// The inner inset for progress bar and separators.
   @IBInspectable
-  public var progressInset: UIEdgeInsets = .init(top: 4, left: 4, bottom: 4, right: 4) {
+  public var progressInset: UIEdgeInsets = .init(top: 8, left: 8, bottom: 8, right: 8) {
     didSet {
       layoutLayers()
     }
@@ -93,7 +93,7 @@ public final class ProgressView: UIView {
 
   @IBInspectable
   /// The width of step separators.
-  public var separatorWidth: CGFloat = 2
+  public var separatorWidth: CGFloat = 4
 
   // MARK: - Private layers
 
@@ -208,25 +208,22 @@ public final class ProgressView: UIView {
   // MARK: - Setup
 
   private func setupLayers() {
-    layer.backgroundColor = UIColor.white.cgColor
+    let primaryColor = UIColor(red: 11/255, green: 36/255, blue: 251/255, alpha: 1)
+    let progressColor = UIColor.white
+
+    layer.backgroundColor = primaryColor.cgColor
     layer.masksToBounds = true
-    layer.cornerRadius = 10
-    layer.borderColor = UIColor.black.cgColor
-    layer.borderWidth = 2
+    layer.borderColor = progressColor.cgColor
+    layer.borderWidth = 4
 
     innerLayer.masksToBounds = true
-    innerLayer.cornerRadius = layer.cornerRadius
-    innerLayer.backgroundColor = layer.backgroundColor
+    innerLayer.backgroundColor = primaryColor.cgColor
 
-    separatorLayer.backgroundColor = UIColor.black.cgColor
+    separatorLayer.backgroundColor = primaryColor.cgColor
 
     progressLayer.position = .zero
     progressLayer.anchorPoint = .zero
-    progressLayer.backgroundColor = UIColor(
-      red: 218/255,
-      green: 236/255,
-      blue: 255/255,
-      alpha: 1).cgColor
+    progressLayer.backgroundColor = progressColor.cgColor
   }
 
   // MARK: - Helpers
