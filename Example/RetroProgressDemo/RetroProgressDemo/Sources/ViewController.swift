@@ -4,24 +4,22 @@ import RetroProgress
 final class ViewController: UIViewController {
   private lazy var progressView = self.makeProgressView()
   private lazy var button: UIButton = self.makeButton()
+  private let styleGuide = StyleGuide()
+
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
 
   // MARK: - View lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "RetroProgress"
-
-    view.backgroundColor = .white
+    view.backgroundColor = styleGuide.primaryColor
     view.addSubview(progressView)
     view.addSubview(button)
 
     button.addTarget(self, action: #selector(handleButtonTap), for: .touchUpInside)
     setupConstraints()
-  }
-
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    progressView.layer.cornerRadius = progressView.frame.height / 2
   }
 
   // MARK: - Action
@@ -39,7 +37,7 @@ final class ViewController: UIViewController {
 
     let constraints = [
       progressView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
-      progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor, multiplier: 0.1),
+      progressView.heightAnchor.constraint(equalTo: progressView.widthAnchor, multiplier: 0.12),
       progressView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       progressView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
@@ -55,23 +53,32 @@ final class ViewController: UIViewController {
 
 private extension ViewController {
   func makeProgressView() -> ProgressView {
-    let progressView = ProgressView(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
-
+    let progressView = ProgressView()
     progressView.fullProgressAnimationDuration = 3
-    progressView.progressInset = .init(top: 4, left: 4, bottom: 4, right: 4)
-    progressView.layer.borderColor = UIColor.black.cgColor
-    progressView.trackColor = .white
-    progressView.progressColor = UIColor(red: 218/255, green: 236/255, blue: 255/255, alpha: 1)
-    progressView.separatorColor = .black
+
+    // The same as default ProgressView styles
+    progressView.progressInset = .init(top: 8, left: 8, bottom: 8, right: 8)
+    progressView.layer.borderColor = styleGuide.progressColor.cgColor
+    progressView.trackColor = styleGuide.primaryColor
+    progressView.progressColor = styleGuide.progressColor
+    progressView.separatorColor = styleGuide.primaryColor
 
     return progressView
   }
 
   func makeButton() -> UIButton {
     let button = UIButton(type: .system)
-    button.setTitle("Animate", for: .normal)
-    button.setTitleColor(.black, for: .normal)
+    button.setTitle("Animate!".uppercased(), for: .normal)
+    button.setTitleColor(styleGuide.buttonColor, for: .normal)
     button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
     return button
   }
+}
+
+// MARK - Styles
+
+private struct StyleGuide {
+  let primaryColor = UIColor(red: 11/255, green: 36/255, blue: 251/255, alpha: 1)
+  let progressColor = UIColor.white
+  let buttonColor = UIColor.red
 }
