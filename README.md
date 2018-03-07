@@ -10,7 +10,7 @@
 ## Description
 
 Do you miss the 90s? We know you do. Dial-up internet, flickering screens,
-brightly coloured websites and, of course, this annoyingly slow progress bar
+brightly colored websites and, of course, this annoyingly slow progress bar
 that has been invented to test your patience. Yes, it was a while ago, but we
 don't want it to be forgotten. Meet **RetroProgress**, a progress bar made to
 cure your 90s nostalgia.
@@ -48,44 +48,25 @@ progressView.animateProgress(to: 0.8)
 <img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/example1.png" alt="RetroProgress" width="350" height="85" />
 </div><br/>
 
-Looks cool, but it's a bit modern, right? Let's make it more retro:
+Do you think it's way too retro? Let's try to make it more modern:
 
 ```swift
 let progressView = ProgressView(frame: CGRect(x: 0, y: 0, width: 360, height: 30))
 
 // Configure
-progressView.progressInset = .init(top: 4, left: 4, bottom: 4, right: 4)
-progressView.layer.cornerRadius = 0
-progressView.layer.borderColor = UIColor.white.cgColor
-progressView.trackColor = .black
-progressView.progressColor = .white
-progressView.separatorColor = .black
-
-// Set progress
-progressView.animateProgress(to: 0.8, duration: 5)
-```
-
-<div align="center">
-<img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/example2.png" alt="RetroProgress" width="350" height="85" />
-</div><br/>
-
-This is closer to want we want, but let's play with colours and bring back
-that corner radius:
-
-```swift
-let progressView = ProgressView(frame: CGRect(x: 0, y: 0, width: 360, height: 30))
-let progressColor = UIColor(red: 52/255, green: 152/255, blue: 219/255, alpha: 1)
-
-// Configure
-progressView.progressInset = .zero
-progressView.layer.cornerRadius = 15
-progressView.layer.borderColor = progressColor.cgColor
+progressView.layer.cornerRadius = 10
+progressView.layer.borderColor = UIColor.black.cgColor
 progressView.trackColor = .white
-progressView.progressColor = progressColor
-progressView.separatorColor = UIColor(red: 218/255, green: 236/255, blue: 255/255, alpha: 1)
+progressView.separatorColor = .black
+progressView.progressColor = UIColor(
+  red: 218/255,
+  green: 236/255,
+  blue: 255/255,
+  alpha: 1
+)
 
 // Set progress
-progressView.animateProgress(to: 0.8, duration: 5)
+progressView.animateProgress(to: 0.8)
 ```
 
 <div align="center">
@@ -106,7 +87,7 @@ progressView.trackColor = .black
 progressView.progressColor = .white
 
 // Set progress
-progressView.animateProgress(to: 0.8, duration: 5)
+progressView.animateProgress(to: 0.8)
 ```
 
 <div align="center">
@@ -114,7 +95,7 @@ progressView.animateProgress(to: 0.8, duration: 5)
 </div><br/>
 
 The options are limitless. Think big, now it's your turn to make the progress
-bar of your dreams.
+bar great again.
 
 ## Public properties
 
