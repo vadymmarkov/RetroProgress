@@ -244,6 +244,13 @@ public final class ProgressView: UIView {
       return 0
     }
 
-    return step / Float(numberOfSteps)
+    switch step {
+    case Float(numberOfSteps)...:
+      return Float(numberOfSteps)
+    case ..<0:
+      return 0
+    default:
+      return step / Float(numberOfSteps)
+    }
   }
 }
