@@ -1,12 +1,14 @@
 Pod::Spec.new do |s|
   s.name             = "RetroProgress"
-  s.summary          = "A short description of RetroProgress."
+  s.summary          = "Retro looking progress bar straight from the 90s"
   s.version          = "1.0.0"
-  s.homepage         = "https://github.com/vadymmarkov/RetroProgress"
+  s.homepage         = "https://github.com/hyperoslo/RetroProgress"
   s.license          = 'MIT'
-  s.author           = { "Hyper Interaktiv AS" => "ios@hyper.no" }
+  s.author           = {
+    "Hyper Interaktiv AS" => "ios@hyper.no"
+  }
   s.source           = {
-    :git => "https://github.com/vadymmarkov/RetroProgress.git",
+    :git => "https://github.com/hyperoslo/RetroProgress.git",
     :tag => s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/hyperoslo'
@@ -19,5 +21,7 @@ Pod::Spec.new do |s|
   s.tvos.source_files = 'Sources/**/*'
 
   s.ios.frameworks = 'UIKit'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  s.pod_target_xcconfig = {
+    'SWIFT_VERSION' => '4.0'
+  }
 end
