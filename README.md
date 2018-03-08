@@ -99,21 +99,20 @@ bar great again.
 
 ## Public properties
 
-`numberOfSteps` - Maximum number of steps. Set to 0 to remove separators.
-`step` - Number of separators (0...numberOfSteps). Values outside are pinned.
-`progress` - 0...1, default is 0. Values outside are pinned.
-`progressInset` - The inner inset for progress bar and separators.
-`trackColor` - The color shown for the portion of the progress bar that is not filled.
-`progressColor` - The color shown for the portion of the progress bar that is filled.
-`separatorColor` - The color used for the step separators.
-`fullProgressAnimationDuration` - The duration for progress animation from 0 to 1.
-`separatorWidth` - The width of step separators.
+* `numberOfSteps` - Maximum number of steps. Set to 0 to remove separators.
+* `step` - Number of separators (0...numberOfSteps). Values outside are pinned.
+* `progress` - 0...1, default is 0. Values outside are pinned.
+* `progressInset` - The inner inset for progress bar and separators.
+* `trackColor` - The color shown for the portion of the progress bar that is not filled.
+* `progressColor` - The color shown for the portion of the progress bar that is filled.
+* `separatorColor` - The color used for the step separators.
+* `fullProgressAnimationDuration` - The duration for progress animation from 0 to 1.
+* `separatorWidth` - The width of step separators.
 
 ## Public methods
 
-`animateProgress(to:duration:)` - Animates progress bar to the specified value (0...1).
-`animateSteps(to:duration:)` - Animates progress bar to the specified value (0...numberOfSteps).
-
+* `animateProgress(to:duration:)` - Animates progress bar to the specified value (0...1).
+* `animateSteps(to:duration:)` - Animates progress bar to the specified value (0...numberOfSteps).
 
 ## Installation
 
