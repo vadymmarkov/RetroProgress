@@ -20,7 +20,7 @@ cure your 90s nostalgia.
 - [x] Progress animations.
 - [x] No external dependencies.
 - [x] [Playgrounds](https://github.com/hyperoslo/RetroProgress/tree/master/Playgrounds).
-- [x] [Demo project](https://github.com/hyperoslo/RetroProgress/tree/master/Example/RetroProgressExample).
+- [x] [Demo project](https://github.com/hyperoslo/RetroProgress/tree/master/Example/RetroProgressDemo).
 
 ## Table of Contents
 
