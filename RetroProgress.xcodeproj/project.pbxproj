@@ -255,7 +255,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Hyper Interaktiv AS";
+				ORGANIZATIONNAME = "Vadym Markov";
 				TargetAttributes = {
 					D284B0FB1F79038B00D94AF3 = {
 						CreatedOnToolsVersion = 9.0;
