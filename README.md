@@ -139,7 +139,7 @@ Vadym Markov, markov.vadym@gmail.com
 ## Credits
 
 This library was originally done at [Hyper](http://hyper.no), a digital
-communications agency with a passion for good code and delightful user experiences https://github.com/hyperoslo.
+communications agency with a passion for [good code](https://github.com/hyperoslo) and delightful user experiences.
 
 ## Contributing
 
