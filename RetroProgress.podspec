@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "RetroProgress"
   s.summary          = "Retro looking progress bar straight from the 90s"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.homepage         = "https://github.com/vadymmarkov/RetroProgress"
   s.license          = 'MIT'
   s.author           = {
