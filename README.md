@@ -1,6 +1,6 @@
-![RetroProgress](https://github.com/hyperoslo/RetroProgress/blob/master/Images/cover.png)
+![RetroProgress](https://github.com/vadymmarkov/RetroProgress/blob/master/Images/cover.png)
 
-[![CI Status](https://img.shields.io/circleci/project/github/hyperoslo/RetroProgress.svg)](https://circleci.com/gh/hyperoslo/RetroProgress)
+[![CI Status](https://img.shields.io/circleci/project/github/vadymmarkov/RetroProgress.svg)](https://circleci.com/gh/vadymmarkov/RetroProgress)
 [![Version](https://img.shields.io/cocoapods/v/RetroProgress.svg?style=flat)](http://cocoadocs.org/docsets/RetroProgress)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/RetroProgress.svg?style=flat)](http://cocoadocs.org/docsets/RetroProgress)
@@ -19,12 +19,12 @@ cure your 90s nostalgia.
 - [x] Support for both progress value (0...1) and number of steps.
 - [x] Progress animations.
 - [x] No external dependencies.
-- [x] [Playgrounds](https://github.com/hyperoslo/RetroProgress/tree/master/Playgrounds).
-- [x] [Demo project](https://github.com/hyperoslo/RetroProgress/tree/master/Example/RetroProgressDemo).
+- [x] [Playgrounds](https://github.com/vadymmarkov/RetroProgress/tree/master/Playgrounds).
+- [x] [Demo project](https://github.com/vadymmarkov/RetroProgress/tree/master/Example/RetroProgressDemo).
 
 ## Table of Contents
 
-<img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/icon.png" width="202" height="203" alt="RetroProgress Icon" align="right" />
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/icon.png" width="202" height="203" alt="RetroProgress Icon" align="right" />
 
 * [Usage](#usage)
 * [Public properties](#public-properties)
@@ -45,7 +45,7 @@ progressView.animateProgress(to: 0.8)
 ```
 
 <div align="center">
-<img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/example1.png" alt="RetroProgress" width="350" height="85" />
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/example1.png" alt="RetroProgress" width="350" height="85" />
 </div><br/>
 
 Do you think it's way too retro? Let's try to make it more modern:
@@ -70,7 +70,7 @@ progressView.animateProgress(to: 0.8)
 ```
 
 <div align="center">
-<img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/example2.png" alt="RetroProgress" width="350" height="85" />
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/example2.png" alt="RetroProgress" width="350" height="85" />
 </div><br/>
 
 Not a fan of those separators? Let's try without them:
@@ -91,7 +91,7 @@ progressView.animateProgress(to: 0.8)
 ```
 
 <div align="center">
-<img src="https://github.com/hyperoslo/RetroProgress/blob/master/Images/example3.png" alt="RetroProgress" width="350" height="85" />
+<img src="https://github.com/vadymmarkov/RetroProgress/blob/master/Images/example3.png" alt="RetroProgress" width="350" height="85" />
 </div><br/>
 
 The options are limitless. Think big, now it's your turn to make the progress
@@ -127,19 +127,24 @@ pod 'RetroProgress'
 To install just write into your Cartfile:
 
 ```ruby
-github "hyperoslo/RetroProgress"
+github "vadymmarkov/RetroProgress"
 ```
 
 **RetroProgress** can also be installed manually. Just download and drop `Sources` folders in your project.
 
 ## Author
 
-Hyper Interaktiv AS, ios@hyper.no
+Vadym Markov, markov.vadym@gmail.com
+
+## Credits
+
+This library was originally done at [Hyper](http://hyper.no), a digital
+communications agency with a passion for good code and delightful user experiences.
 
 ## Contributing
 
-We would love you to contribute to **RetroProgress**, check the [CONTRIBUTING](https://github.com/hyperoslo/RetroProgress/blob/master/CONTRIBUTING.md) file for more info.
+Check the [CONTRIBUTING](https://github.com/vadymmarkov/RetroProgress/blob/master/CONTRIBUTING.md) file for more info.
 
 ## License
 
-**RetroProgress** is available under the MIT license. See the [LICENSE](https://github.com/hyperoslo/RetroProgress/blob/master/LICENSE.md) file for more info.
+**RetroProgress** is available under the MIT license. See the [LICENSE](https://github.com/vadymmarkov/RetroProgress/blob/master/LICENSE.md) file for more info.
