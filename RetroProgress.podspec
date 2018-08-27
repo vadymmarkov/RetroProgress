@@ -2,16 +2,16 @@ Pod::Spec.new do |s|
   s.name             = "RetroProgress"
   s.summary          = "Retro looking progress bar straight from the 90s"
   s.version          = "1.0.0"
-  s.homepage         = "https://github.com/hyperoslo/RetroProgress"
+  s.homepage         = "https://github.com/vadymmarkov/RetroProgress"
   s.license          = 'MIT'
   s.author           = {
-    "Hyper Interaktiv AS" => "ios@hyper.no"
+    "Vadym Markov" => "markov.vadym@gmail.com"
   }
   s.source           = {
-    :git => "https://github.com/hyperoslo/RetroProgress.git",
+    :git => "https://github.com/vadymmarkov/RetroProgress.git",
     :tag => s.version.to_s
   }
-  s.social_media_url = 'https://twitter.com/hyperoslo'
+  s.social_media_url = 'https://twitter.com/vadymmarkov'
 
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.2'
